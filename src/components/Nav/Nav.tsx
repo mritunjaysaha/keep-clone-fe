@@ -1,3 +1,9 @@
+import { ModeSwitch } from '@/components/ModeSwitch/ModeSwitch';
+
 export function Nav() {
-    return <>Nav</>;
+    return (
+        <nav>
+            <ModeSwitch />
+        </nav>
+    );
 }

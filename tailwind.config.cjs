@@ -7,7 +7,10 @@ module.exports = {
       roboto: ['Roboto', 'sans-serif'],
       montserrat: ['Montserrat', 'sans-serif']
     },
-    extend: {},
+    extend: {
+      colors: {
+      }
+    },
   },
   plugins: [],
 }

@@ -7,7 +7,7 @@ interface ILayout {
 
 export function Layout({ children }: ILayout) {
     return (
-        <section>
+        <section className='bg-slate-100 text-black dark:bg-slate-900 dark:text-white'>
             {/* head */}
             <Nav />
 

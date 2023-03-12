@@ -12,7 +12,6 @@ export const useDarkMode = () => {
         if (window === undefined) return;
 
         const root = window.document.documentElement;
-
         root.classList.remove(enabled ? 'light' : 'dark');
         root.classList.add(enabled ? 'dark' : 'light');
     });

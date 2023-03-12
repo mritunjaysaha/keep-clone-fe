@@ -86,7 +86,6 @@ export function AppRoutes() {
                     </PrivateRoute>
                 }
             />
-
             <Route
                 path={ROUTES.ARCHIVE}
                 element={

@@ -11,6 +11,10 @@
     list-style: none;
 }
 
-html {
-    font-size: 62.5%;
+#toggle:checked ~ label span.toggle-dot {
+    @apply translate-x-5;
+}
+
+#toggle:focus ~ label span.toggle-dot {
+    @apply ring ring-slate-500;
 }
