@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router';
 import loadable from '@loadable/component';
 
 import ROUTES from '@/constants/routes.json';
+import { PrivateRoute } from '@/_utils/privateRoute';
 
 const Dashboard = loadable(() => import('@/pages/dashboard'));
 
@@ -12,7 +13,14 @@ const Signup = loadable(() => import('@/pages/signup'));
 export function AppRoutes() {
     return (
         <Routes>
-            <Route path={ROUTES.HOME} element={<Dashboard />} />
+            <Route
+                path={ROUTES.HOME}
+                element={
+                    <PrivateRoute>
+                        <Dashboard />
+                    </PrivateRoute>
+                }
+            />
             <Route path={ROUTES.LOGIN} element={<Login />} />
             <Route path={ROUTES.SIGNUP} element={<Signup />} />
         </Routes>
