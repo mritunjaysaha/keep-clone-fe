@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router';
 import loadable from '@loadable/component';
 import { useDispatch } from 'react-redux';
-import jwt_decode from 'jwt-decode';
+import jwtDecode from 'jwt-decode';
 
 import ROUTES from '@/constants/routes.json';
 import { PrivateRoute } from '@/_utils/privateRoute';
@@ -25,16 +25,17 @@ export function AppRoutes() {
             console.log({ token });
             setAuthToken(token);
 
-            const decoded = jwt_decode(token);
+            const decoded = jwtDecode(token);
+
             console.log({ decoded });
 
             dispatch(setAuth(decoded));
 
             const currentTime = Date.now() / 1000;
 
-            if (decoded.exp < currentTime) {
-                navigate(ROUTES.LOGIN);
-            }
+            // if (decoded.exp < currentTime) {
+            //     navigate(ROUTES.LOGIN);
+            // }
         }
     }, []);
 

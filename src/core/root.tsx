@@ -6,7 +6,7 @@ import { AppRoutes } from '@/core/routes';
 import axios from 'axios';
 
 // @ts-ignore
-axios.defaults.baseURL = process.env.BASE_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 
 export function Root() {
     return (
