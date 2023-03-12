@@ -1,5 +1,10 @@
 {
     "HOME": "/",
     "LOGIN": "/login",
-    "SIGNUP": "/signup"
+    "SIGNUP": "/signup",
+    "LABEL": "/label",
+    "SEARCH": "/search",
+    "ARCHIVE": "/archive",
+    "TRASH": "/trash",
+    "REMINDERS": "/reminders"
 }
