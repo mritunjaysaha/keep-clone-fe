@@ -15,5 +15,7 @@ export const useDarkMode = () => {
 
         root.classList.remove(enabled ? 'light' : 'dark');
         root.classList.add(enabled ? 'dark' : 'light');
-    }, []);
+    });
+
+    return [enabled, setIsEnabled] as const;
 };
