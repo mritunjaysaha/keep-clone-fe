@@ -6,8 +6,8 @@ export const ModeSwitch = () => {
     const [isDark, setIsDark] = useDarkMode();
 
     return (
-        <div className='flex w-[5.6rem] items-center justify-between'>
-            <IconSun />
+        <div className='flex w-[5.6rem] items-center justify-between text-black dark:text-white'>
+            <IconSun className={`${isDark ? 'icon-light' : 'icon-dark'}`} />
             <div>
                 <input
                     type='checkbox'
@@ -27,7 +27,7 @@ export const ModeSwitch = () => {
                     </span>
                 </label>
             </div>
-            <IconMoon />
+            <IconMoon className={`${isDark ? 'icon-light' : 'icon-dark'}`} />
         </div>
     );
 };
