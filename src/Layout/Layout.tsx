@@ -7,16 +7,16 @@ interface ILayout {
 
 export function Layout({ children }: ILayout) {
     return (
-        <section className='bg-slate-100 text-black dark:bg-slate-900 dark:text-white h-screen w-screen'>
+        <section className='bg-slate-100 text-black dark:bg-slate-900 dark:text-white h-screen w-screen '>
             {/* head */}
             <Nav />
 
             {/* body */}
-            <section>
+            <section className='flex h-90v w-screen bg-yellow-50'>
                 {/* left */}
                 <NavSide />
                 {/* right */}
-                <section>{children}</section>
+                <section className='bg-blue-500 w-full'>{children}</section>
             </section>
         </section>
     );

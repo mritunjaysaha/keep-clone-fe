@@ -10,6 +10,11 @@ module.exports = {
     extend: {
       colors: {
       }
+      ,
+      height: {
+        "10v": "10vh",
+        "90v": "90vh"
+      }
     },
   },
   plugins: [],
