@@ -18,9 +18,15 @@ export function SearchInput({ placeholder }: SearchInputProps) {
         console.log('Search close clicked');
     }
 
+    function handleSearchClick() {
+        console.log('Search click');
+    }
+
     return (
         <form className='flex items-center h-12 bg-gray-600 p-4 rounded-md '>
-            <BiSearchAlt2 size={20} className='mr-2 text-white' />
+            <button onClick={handleSearchClick}>
+                <BiSearchAlt2 size={20} className='mr-2 text-white' />
+            </button>
             <input
                 className='bg-inherit w-96 pl-4 h-8 placeholder-white text-white focus:outline-none'
                 value={val}
