@@ -1,8 +1,9 @@
 import { NavButtons } from '@/components/NavSide/components/NavButtons';
+import { useNavSide } from '@/_hooks/useNavSide';
 import { BsLightbulb } from 'react-icons/bs';
 
 export function NavSide() {
-    const isNavSideClose = false;
+    const { isNavSideClose } = useNavSide();
 
     return (
         <section className={`flex flex-col ${isNavSideClose ? 'w-16' : 'w-60'} bg-red-500 h-full`}>
