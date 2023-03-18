@@ -22,7 +22,7 @@ export function SearchInput({ placeholder }: SearchInputProps) {
         <form className='flex items-center h-12 bg-gray-600 p-4 rounded-md '>
             <BiSearchAlt2 size={20} className='mr-2 text-white' />
             <input
-                className='bg-inherit w-96 pl-4 h-8 placeholder-white text-white'
+                className='bg-inherit w-96 pl-4 h-8 placeholder-white text-white focus:outline-none'
                 value={val}
                 placeholder={placeholder}
                 onChange={handleChange}
